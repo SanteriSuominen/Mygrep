@@ -17,7 +17,7 @@ int main(int argc, char** argv) // otetaan vastaan komentorivin käskyt ja käytet
 	{
 		command = argv[1];
 		searchTerm = argv[2];
-		path = argv[3];
+		path =	argv[3];
 	}
 
 	searchFromFile(command, searchTerm, path);

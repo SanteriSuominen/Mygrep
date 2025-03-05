@@ -7,5 +7,24 @@ How to use:
 
 Windows example!
 
-You will find .exe file in MyGrepProgram/x64/debug
-Open CMD go to the .exe location in the debug file  example(cd c:/file/file/M)
+You will find .exe file in Mygrep/MyGrepProgram/x64/debug
+Open CMD go to the .exe location in the debug file  example(cd c:/yourfiles/yourfiles/Mygrep/MyGrepProgram/x64/debug) " "yourfiles" depending where you installed my program"
+
+when you are in debug location its time to run the program! :)
+
+Command example: c:/.../x64/debug MyGrepProgram.exe -olori following c:/somefile/otherfile/textfile.txt
+
+-olori		following		c:/somefile/otherfile/textfile.txt
+Command	       search word	    Path to the file from where to search from
+
+What are commands and how to use them:
+
+Always put "-o" in beginning it means options otherwise your commands are ignored and result to unexpected behavior.
+
+	[l] = adds line numbers. 1:lorem lipsum ...
+	[o] = adds a message to the end that informs total lines where your search term was found or not found {LISTEN! NOT! SAME! AS! the frist o in -o how to uses correctly in command example [-olo] <-- correct way}
+	[r] = reverse search flips the program on its head and outputs all the lines that dont include your search term all other commands are compatible with this mode.
+	[i] = noCase ignores diffirence of lower and uppercase.
+
+You can use multiple at the same time -ol -olo -ori.
+Order doesnt matter you can write -olori -oorli -orilo.
