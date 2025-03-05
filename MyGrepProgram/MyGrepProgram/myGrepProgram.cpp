@@ -18,9 +18,24 @@ int main(int argc, char** argv) // otetaan vastaan komentorivin käskyt ja käytet
 		command = argv[1];
 		searchTerm = argv[2];
 		path =	argv[3];
+
+		searchFromFile(command, searchTerm, path);
 	}
 
-	searchFromFile(command, searchTerm, path);
+	else // inkrementti 1 VÄHÄN TURHA SILLÄ KOKO KOODI EI PELITÄ ILMAN TÄTÄ LOGIIKKAA, MUTTA TÄSSÄ SE ON!
+	{
+		std::string text, search;
+		std::cout << "Give a string from which to search for: ";
+		std::getline(std::cin, text);
+		std::cout << "Give search string: ";
+		std::getline(std::cin, search);
+
+		size_t position = text.find(search);
+		if (position != std::string::npos)
+		{
+			std::cout << "\"" << search << "\" found in \"" << text << "\"" <<  " in postion " << position << std::endl;
+		}
+	}
 
     return 0;
 }
@@ -51,7 +66,6 @@ void searchFromFile(std::string& command,std::string& searchTerm,std::string& pa
 	int hitCount = 0;
 	if (fileExists(path))	// onko tiedosto olemassa
 	{
-		std::cout << "\nFile has been found" << std::endl;;
 
 		std::ifstream userFile(path);
 
@@ -108,8 +122,7 @@ bool searchFromString(std::string& line, std::string& search, int lineCount, boo
 			if (lineNumbers) // lisää joka rivin alkuun sille kuuluvan rivi numeron
 				std::cout << lineCount << ":";
 
-			std::cout << line;
-			std::cout << " || " << search << " found in postion: " << position << std::endl;
+			std::cout << line << std::endl;
 			return true;
 		}
 	}

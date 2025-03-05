@@ -1,4 +1,4 @@
-Thank you for using MyGrepProgram
+Thank you for using MyGrepProgram!
 
 This program is a command-line tool used to search for specific text patterns within files or input streams. It reads input line by line, 
 checks if a line contains a match for a given search pattern, and outputs the matching lines.
@@ -28,3 +28,7 @@ Always put "-o" in beginning it means options otherwise your commands are ignore
 
 You can use multiple at the same time -ol -olo -ori.
 Order doesnt matter you can write -olori -oorli -orilo.
+
+!!!!! YOU DONT HAVE TO USE FILE SEARCH !!!!!
+
+You can also only use MyGrepProgram.exe and it will start a sub system that asks you to give a text and a search term after that ! (THIS IS A SIMPLE SUB SYSTEM ALTERNATIVE IF YOU DONT WANT TO SEARCH FROM FILE BUT STRING INSTEAD)
